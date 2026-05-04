@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – ToS Analyzer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #2d3148;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .logo-icon { font-size: 2rem; }
+    .logo-name { font-size: 1.4rem; font-weight: 700; color: #f1f5f9; }
+
+    header p { color: #64748b; font-size: 0.9rem; }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 0.5rem;
+    }
+
+    .updated {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-bottom: 2rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #818cf8;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #1e2130;
+    }
+
+    p { margin-bottom: 0.75rem; color: #cbd5e1; }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    ul li::before { content: "→ "; color: #6366f1; }
+    ul li { color: #cbd5e1; padding-left: 0.25rem; }
+
+    .highlight-box {
+      background: #1e2130;
+      border: 1px solid #2d3148;
+      border-left: 3px solid #6366f1;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .highlight-box p { margin: 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.6rem 0.875rem;
+      background: #1e2130;
+      color: #94a3b8;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    td {
+      padding: 0.6rem 0.875rem;
+      border-bottom: 1px solid #1e2130;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .badge-local  { background: #14532d; color: #86efac; }
+    .badge-remote { background: #78350f; color: #fcd34d; }
+    .badge-none   { background: #1e2130; color: #64748b; border: 1px solid #374151; }
+
+    a { color: #818cf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #2d3148;
+      color: #475569;
+      font-size: 0.82rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <div class="logo">
+        <span class="logo-icon">🔍</span>
+        <span class="logo-name">ToS Analyzer</span>
+      </div>
+      <p>Chrome Extension · developed by Abdelrahman Salama</p>
+    </header>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: May 2025</p>
+
+    <!-- Summary -->
+    <section>
+      <h2>Summary</h2>
+      <div class="highlight-box">
+        <p>ToS Analyzer does <strong>not collect, transmit, or sell any personal data</strong>.
+        All data is stored locally on your device. The only external connection is the AI provider
+        you choose (Groq, OpenAI, or Anthropic), authorized with your own API key.</p>
+      </div>
+    </section>
+
+    <!-- What data -->
+    <section>
+      <h2>What Data Is Stored</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Where</th>
+            <th>Purpose</th>
+            <th>Storage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI Provider &amp; API Key</td>
+            <td><span class="badge badge-local">Local only</span></td>
+            <td>Authenticate requests to your chosen AI provider (Groq, OpenAI, or Anthropic)</td>
+            <td>chrome.storage.local — never leaves your device</td>
+          </tr>
+          <tr>
+            <td>Language preference</td>
+            <td><span class="badge badge-local">Local only</span></td>
+            <td>Display results in German or English</td>
+            <td>chrome.storage.local</td>
+          </tr>
+          <tr>
+            <td>Highlighting setting</td>
+            <td><span class="badge badge-local">Local only</span></td>
+            <td>Remember whether inline highlighting is enabled</td>
+            <td>chrome.storage.local</td>
+          </tr>
+          <tr>
+            <td>Analysis history</td>
+            <td><span class="badge badge-local">Local only</span></td>
+            <td>Show last 5 analyses in the extension popup</td>
+            <td>chrome.storage.local — cleared when extension is removed</td>
+          </tr>
+          <tr>
+            <td>Page text (ToS content)</td>
+            <td><span class="badge badge-remote">Sent to AI provider</span></td>
+            <td>AI analysis of the Terms of Service document</td>
+            <td>Transmitted only when you click "Analyze" — subject to your chosen provider's privacy policy</td>
+          </tr>
+          <tr>
+            <td>Browsing history / URLs</td>
+            <td><span class="badge badge-none">Not collected</span></td>
+            <td>—</td>
+            <td>Never stored or transmitted</td>
+          </tr>
+          <tr>
+            <td>Personal identity</td>
+            <td><span class="badge badge-none">Not collected</span></td>
+            <td>—</td>
+            <td>No accounts, no login, no tracking</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Third party -->
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>When you click "Analyze", the text content of the current page is sent directly to
+      your chosen AI provider using your personal API key. The following providers are supported:</p>
+      <ul>
+        <li><strong>Groq</strong> (<a href="https://groq.com" target="_blank" rel="noopener">groq.com</a>) — <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+        <li><strong>OpenAI</strong> (<a href="https://openai.com" target="_blank" rel="noopener">openai.com</a>) — <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
+        <li><strong>Anthropic</strong> (<a href="https://anthropic.com" target="_blank" rel="noopener">anthropic.com</a>) — <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+      </ul>
+      <ul>
+        <li>You provide your own API key — ToS Analyzer has no access to it beyond sending your requests</li>
+        <li>No other third-party services, analytics tools, or advertisement networks are used</li>
+      </ul>
+    </section>
+
+    <!-- Permissions -->
+    <section>
+      <h2>Why These Permissions Are Required</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>activeTab</code></td>
+            <td>Read the content of the currently active tab when you click "Analyze"</td>
+          </tr>
+          <tr>
+            <td><code>storage</code></td>
+            <td>Save your API key, language preference, and analysis history locally</td>
+          </tr>
+          <tr>
+            <td><code>scripting</code></td>
+            <td>Inject the content script that extracts page text and highlights passages</td>
+          </tr>
+          <tr>
+            <td><code>host_permissions: &lt;all_urls&gt;</code></td>
+            <td>Terms of Service documents exist on every domain. The extension must be able to read page text regardless of which website you are visiting.</td>
+          </tr>
+          <tr>
+            <td><code>host_permissions: api.groq.com, api.openai.com, api.anthropic.com</code></td>
+            <td>Send extracted text to your chosen AI provider for analysis</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- GDPR -->
+    <section>
+      <h2>GDPR / Your Rights (Austria &amp; EU)</h2>
+      <p>Because ToS Analyzer does not collect or process any personal data on our end,
+      most GDPR obligations do not apply to this extension directly. Specifically:</p>
+      <ul>
+        <li>No data is stored on any server we operate</li>
+        <li>No data is shared with advertisers or data brokers</li>
+        <li>No profiling or automated decision-making takes place</li>
+      </ul>
+      <p>All data stored by the extension lives in your browser's local storage and can be
+      deleted at any time by removing the extension from Chrome
+      (<strong>chrome://extensions</strong> → Remove).</p>
+    </section>
+
+    <!-- Children -->
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>ToS Analyzer is not directed at children under the age of 13 and does not knowingly
+      collect any information from children.</p>
+    </section>
+
+    <!-- Changes -->
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>If this privacy policy changes, the updated version will be published at this URL
+      with a new "Last updated" date. Continued use of the extension after changes constitutes
+      acceptance of the updated policy.</p>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy, you can reach the developer at:</p>
+      <p><a href="mailto:rahman.salama78@gmail.com">rahman.salama78@gmail.com</a></p>
+    </section>
+
+    <footer>
+      &copy; 2025 Abdelrahman Salama · ToS Analyzer · Vienna, Austria
+    </footer>
+
+  </div>
+</body>
+</html>
